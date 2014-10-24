@@ -1,0 +1,27 @@
+<assembly>
+    <id>bundle</id>
+    <formats>
+        <format>tar.gz</format>
+    </formats>
+    <includeBaseDirectory>true</includeBaseDirectory>
+    <fileSets>
+        <!-- Resolving project.version from pom -->
+        <fileSet>
+            <directory>${basedir}/target/classes</directory>
+            <outputDirectory>app/js/</outputDirectory>
+        </fileSet>
+        <fileSet>
+            <directory>${basedir}</directory>
+            <excludes>
+                <exclude>config/env/local.json</exclude>
+            </excludes>
+            <includes>
+                <include>app/**/*</include>
+                <include>spec/**/*</include>
+                <include>config/**/*</include>
+                <include>package.json</include>
+                <include>bower.json</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+</assembly>
