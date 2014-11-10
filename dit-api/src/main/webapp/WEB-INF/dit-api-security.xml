@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:sec="http://www.springframework.org/schema/security"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd">
+
+    <!--<sec:filter-chain-map>-->
+        <!--<sec:filter-chain filters="authenticateValidationFilter" pattern="/public/client/authenticate/"/>-->
+    <!--</sec:filter-chain-map>-->
+
+    <sec:http pattern="/public/client/authenticate/" security="none"/>
+    <sec:http pattern="/public/client/auth/twitter/url/" security="none"/>
+
+    <!-- Secure the rest of the API-->
+    <sec:http pattern="/connector/**" use-expressions="true" create-session="never" entry-point-ref="forbiddenFilter">
+        <sec:intercept-url pattern="/connector/**" access="isFullyAuthenticated()"/>
+        <sec:custom-filter ref="oauthTokenFilter" position="PRE_AUTH_FILTER"/>
+    </sec:http>
+
+    <sec:authentication-manager>
+        <sec:authentication-provider user-service-ref="userServiceImpl">
+            <sec:password-encoder ref="passwordEncoder"/>
+        </sec:authentication-provider>
+    </sec:authentication-manager>
+
+    <bean id="forbiddenFilter" class="org.springframework.security.web.authentication.Http403ForbiddenEntryPoint"/>
+
+    <bean id="oauthTokenFilter" class="com.govitec.api.security.OauthTokenPreAuthFilter">
+        <property name="authenticationManager" ref="resourceAuthenticationManager"/>
+    </bean>
+
+</beans>
