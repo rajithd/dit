@@ -2,7 +2,7 @@
 
 /* App Module */
 
-var phonecatApp = angular.module('phonecatApp', [
+var ditApp = angular.module('ditApp', [
   'ngRoute',
   'phonecatAnimations',
 
@@ -11,7 +11,7 @@ var phonecatApp = angular.module('phonecatApp', [
   'phonecatServices'
 ]);
 
-phonecatApp.config(['$routeProvider',
+ditApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
       when('/phones', {
