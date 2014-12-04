@@ -1,5 +1,7 @@
 package com.dit.service.impl;
 
+import com.dit.Customer;
+import com.dit.Person;
 import com.dit.account.User;
 import com.dit.repository.UserRepository;
 import com.dit.service.UserService;
@@ -34,7 +36,15 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User buildUser(UserProfile userProfile) {
-        return null;
+        Person person = new Customer();
+        person.setFirstName(userProfile.getFirstName());
+        person.setLastName(userProfile.getLastName());
+
+        User user = new User();
+        user.setPerson(person);
+        user.setEmail(userProfile.getEmail());
+        user.setUsername(userProfile.getUsername());
+        return user;
     }
 
     @Override

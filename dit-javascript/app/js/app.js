@@ -3,26 +3,32 @@
 /* App Module */
 
 var ditApp = angular.module('ditApp', [
-  'ngRoute',
-  'phonecatAnimations',
+    'ngRoute',
+    'ditAnimations',
 
-  'phonecatControllers',
-  'phonecatFilters',
-  'phonecatServices'
+    'ditControllers',
+    'ditFilters',
+    'ditServices'
 ]);
 
-ditApp.config(['$routeProvider',
-  function($routeProvider) {
-    $routeProvider.
-      when('/phones', {
-        templateUrl: 'partials/phone-list.html',
-        controller: 'PhoneListCtrl'
-      }).
-      when('/phones/:phoneId', {
-        templateUrl: 'partials/phone-detail.html',
-        controller: 'PhoneDetailCtrl'
-      }).
-      otherwise({
-        redirectTo: '/phones'
-      });
-  }]);
+ditApp.config(['$routeProvider','$locationProvider',
+    function ($routeProvider, $locationProvider) {
+        $routeProvider.
+            when('/index', {
+                templateUrl: 'views/main.html',
+                controller: 'indexController'
+            }).
+            when('/phones/:phoneId', {
+                templateUrl: 'partials/phone-detail.html',
+                controller: 'PhoneDetailCtrl'
+            }).
+            when('/twitter/callback', {
+                templateUrl: 'views/main.html',
+                controller: 'twitterController'
+            }).
+            otherwise({
+                redirectTo: '/index'
+            });
+
+//        $locationProvider.html5Mode(true);
+    }]);

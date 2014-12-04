@@ -1,25 +1,15 @@
-########################################
-#### IDE specific rules:
-########################################
-.classpath
-.project
-.settings/
-target/
-*.iml
-*.idea/
-
-########################################
-#### OSX/Finder:
-########################################
-.DS_Store
-*.DS_Store
-
-
-########################################
-#### Misc/general rules:
-########################################
-*.log
-*.tlog
-*-override.properties
-*globals.js
-veip-web-openshift/overlays/
+logs
+project/project
+project/target
+target
+tmp
+.history
+dist
+/.idea
+/*.iml
+/out
+/.idea_modules
+/.classpath
+/.project
+/RUNNING_PID
+/.settings

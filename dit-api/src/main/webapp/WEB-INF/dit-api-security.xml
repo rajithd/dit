@@ -14,7 +14,7 @@
     <!-- Secure the rest of the API-->
     <sec:http pattern="/connector/**" use-expressions="true" create-session="never" entry-point-ref="forbiddenFilter">
         <sec:intercept-url pattern="/connector/**" access="isFullyAuthenticated()"/>
-        <sec:custom-filter ref="oauthTokenFilter" position="PRE_AUTH_FILTER"/>
+        <sec:custom-filter ref="bearerToken" position="PRE_AUTH_FILTER"/>
     </sec:http>
 
     <sec:authentication-manager>
@@ -25,7 +25,7 @@
 
     <bean id="forbiddenFilter" class="org.springframework.security.web.authentication.Http403ForbiddenEntryPoint"/>
 
-    <bean id="oauthTokenFilter" class="com.govitec.api.security.OauthTokenPreAuthFilter">
+    <bean id="bearerToken" class="com.dit.security.BearerTokenPreAuthFilter">
         <property name="authenticationManager" ref="resourceAuthenticationManager"/>
     </bean>
 
