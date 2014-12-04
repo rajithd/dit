@@ -1,10 +1,12 @@
 package com.dit;
 
-public class Person {
+public abstract class Person {
 
     private String firstName;
     private String lastName;
     private String contactNumber;
+    private String restaurantName;
+    private String restaurantRegNo;
 
     public String getFirstName() {
         return firstName;
@@ -28,5 +30,21 @@ public class Person {
 
     public void setContactNumber(String contactNumber) {
         this.contactNumber = contactNumber;
+    }
+
+    public String getRestaurantName() {
+        return restaurantName;
+    }
+
+    public void setRestaurantName(String restaurantName) {
+        this.restaurantName = restaurantName;
+    }
+
+    public String getRestaurantRegNo() {
+        return restaurantRegNo;
+    }
+
+    public void setRestaurantRegNo(String restaurantRegNo) {
+        this.restaurantRegNo = restaurantRegNo;
     }
 }

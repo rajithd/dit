@@ -1,0 +1,1 @@
+mongo --eval "print('apples');"
