@@ -7,6 +7,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>dit-domain</module>
+        <module>dit-service</module>
         <module>dit-api</module>
         <module>dit-javascript</module>
         <module>dit-notification</module>
