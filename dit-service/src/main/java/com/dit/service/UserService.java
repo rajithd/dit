@@ -48,4 +48,6 @@ public interface UserService extends UserDetailsService {
      */
     List<User> findByUserConnectionProviderId(String providerId);
 
+    User findByUsernameAndPassword(String username, String password);
+
 }

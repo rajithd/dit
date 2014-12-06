@@ -1,12 +1,23 @@
 package com.dit;
 
-public abstract class Person {
+import org.springframework.data.annotation.Id;
 
+public class Person {
+
+    @Id
+    private String id;
     private String firstName;
     private String lastName;
     private String contactNumber;
-    private String restaurantName;
-    private String restaurantRegNo;
+    private Restaurant restaurant;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getFirstName() {
         return firstName;
@@ -32,19 +43,15 @@ public abstract class Person {
         this.contactNumber = contactNumber;
     }
 
-    public String getRestaurantName() {
-        return restaurantName;
+    public String getFullName(){
+        return this.firstName + " " + this.lastName;
     }
 
-    public void setRestaurantName(String restaurantName) {
-        this.restaurantName = restaurantName;
+    public Restaurant getRestaurant() {
+        return restaurant;
     }
 
-    public String getRestaurantRegNo() {
-        return restaurantRegNo;
-    }
-
-    public void setRestaurantRegNo(String restaurantRegNo) {
-        this.restaurantRegNo = restaurantRegNo;
+    public void setRestaurant(Restaurant restaurant) {
+        this.restaurant = restaurant;
     }
 }

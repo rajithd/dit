@@ -1,7 +1,10 @@
 package com.dit;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import java.util.List;
 
+@Document(collection = "restaurants")
 public class Restaurant {
 
     private String id;
@@ -9,6 +12,9 @@ public class Restaurant {
     private String description;
     private String address;
     private List<Zone> zones;
+    private String url;
+    private String regNo;
+    private String slogan;
 
     public String getId() {
         return id;
@@ -48,5 +54,29 @@ public class Restaurant {
 
     public void setZones(List<Zone> zones) {
         this.zones = zones;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public String getRegNo() {
+        return regNo;
+    }
+
+    public void setRegNo(String regNo) {
+        this.regNo = regNo;
+    }
+
+    public String getSlogan() {
+        return slogan;
+    }
+
+    public void setSlogan(String slogan) {
+        this.slogan = slogan;
     }
 }
