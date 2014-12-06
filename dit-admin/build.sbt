@@ -10,6 +10,6 @@ resolvers += Resolver.mavenLocal
 
 libraryDependencies ++= Seq(
   "org.mongodb" % "mongo-java-driver" % "2.12.4",
-  "com.dit" % "dit-service" % "1.0-SNAPSHOT",
+  "com.dit" % "dit-domain" % "1.0-SNAPSHOT",
   "com.google.code.gson" % "gson" % "2.3.1"
 )

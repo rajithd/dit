@@ -13,9 +13,12 @@ public class Application extends Controller {
         if (username == null) {
             return redirect(routes.LoginController.login());
         }
-        String firstName = session.get("firstName");
-//        String userId = session("userId");
-        return ok(index.render("Home", firstName));
+        String fullName = session.get("fullName");
+        String restaurantName = session.get("restaurantName");
+        String restaurantUrl = session.get("restaurantUrl");
+        String restaurantDescription = session.get("restaurantDescription");
+        String restaurantSlogan = session.get("restaurantSlogan");
+        return ok(index.render("Home", fullName, restaurantName, restaurantUrl, restaurantDescription, restaurantSlogan));
     }
 
 }
