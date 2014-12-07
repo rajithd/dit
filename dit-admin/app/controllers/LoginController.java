@@ -3,11 +3,11 @@ package controllers;
 import com.dit.account.User;
 import models.UserDao;
 import play.Logger;
+import play.cache.Cache;
 import play.data.DynamicForm;
 import play.mvc.Controller;
-import play.mvc.Http;
 import play.mvc.Result;
-import views.html.index;
+import util.HttpConnector;
 import views.html.login;
 
 import static play.data.Form.form;
@@ -18,32 +18,26 @@ public class LoginController extends Controller {
         return ok(login.render());
     }
 
-    public static Result submit() {
+    public static Result submit() throws Exception {
         DynamicForm dynamicForm = form().bindFromRequest();
         Logger.info("Username is: " + dynamicForm.get("username"));
         UserDao userDao = new UserDao();
-        User user = userDao.findUser(dynamicForm.get("username"), dynamicForm.get("password"), dynamicForm.get("restaurantRegNo"));
+        String username = dynamicForm.get("username");
+        String password = dynamicForm.get("password");
+        String restaurantRegNo = dynamicForm.get("restaurantRegNo");
+
+        HttpConnector httpConnector = new HttpConnector();
+        User user = httpConnector.doGet("http://localhost:8080/dit-api/public/admin/user/" + username + "/" + password + "/" + restaurantRegNo, User.class);
+
         if (user == null) {
             return ok(login.render());
         }
-        Http.Session session = Http.Context.current().session();
-        session.put("username", user.getUsername());
-        session.put("fullName", user.getPerson().getFullName());
-        session.put("restaurantName", user.getPerson().getRestaurant().getName());
-        session.put("restaurantUrl", user.getPerson().getRestaurant().getUrl());
-        session.put("restaurantDescription", user.getPerson().getRestaurant().getDescription());
-        session.put("restaurantSlogan", user.getPerson().getRestaurant().getSlogan());
+        Cache.set("user", user, 3600 * 60 * 60 * 60);
         return redirect(routes.Application.index());
     }
 
-    public static Result logout(){
-        Http.Session session = Http.Context.current().session();
-        session.remove("username");
-        session.remove("fullName");
-        session.remove("restaurantName");
-        session.remove("restaurantUrl");
-        session.remove("restaurantDescription");
-        session.remove("restaurantSlogan");
+    public static Result logout() {
+        Cache.remove("user");
         return redirect(routes.LoginController.login());
     }
 

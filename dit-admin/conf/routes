@@ -3,13 +3,18 @@
 # ~~~~
 
 # Home page
-GET        /                    controllers.LoginController.login
+GET         /                    controllers.LoginController.login
 
-GET        /index               controllers.Application.index
+GET         /index               controllers.Application.index
 
-GET        /login               controllers.LoginController.login
-POST       /login               controllers.LoginController.submit
-GET       /logout               controllers.LoginController.logout
+GET         /login               controllers.LoginController.login
+POST        /login               controllers.LoginController.submit
+GET         /logout              controllers.LoginController.logout
+
+GET         /zones               controllers.Application.zones
+POST        /zones               controllers.Application.zonesSubmit
+
+GET         /tables/:zoneId      controllers.Application.getTableStructure(zoneId : String)
 
 # Map static resources from the /public folder to the /assets URL path
-GET        /assets/*file        controllers.Assets.at(path="/public", file)
+GET         /assets/*file        controllers.Assets.at(path="/public", file)

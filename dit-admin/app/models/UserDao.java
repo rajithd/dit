@@ -6,6 +6,7 @@ import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
 import com.mongodb.DBObject;
+import org.bson.types.ObjectId;
 import play.Logger;
 
 import java.net.UnknownHostException;
@@ -27,11 +28,20 @@ public class UserDao {
             if (dbObject == null) {
                 return null;
             }
-            return new Gson().fromJson(dbObject.toString(), User.class);
+            User user = new Gson().fromJson(dbObject.toString(), User.class);
+            ObjectId objectId = (ObjectId) dbObject.get("_id");
+            user.setId(objectId.toString());
+            BasicDBObject basicDBObject = (BasicDBObject) dbObject.get("person");
+            BasicDBObject restaurant = (BasicDBObject) basicDBObject.get("restaurant");
+            ObjectId resId = (ObjectId) restaurant.get("_id");
+            user.getPerson().getRestaurant().setId(resId.toString());
+            return user;
         } catch (UnknownHostException e) {
             Logger.error("Error occur while getting user", e);
         }
         return null;
     }
+
+
 
 }

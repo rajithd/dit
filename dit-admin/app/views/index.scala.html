@@ -1,6 +1,6 @@
-@(title: String, fullName: String, restaurantName:String, restaurantUrl:String, restaurantDescription:String, restaurantSlogan:String)
+@(title: String, user: com.dit.account.User, restaurant: com.dit.Restaurant)
 
-    @main(title, fullName: String, restaurantName:String, restaurantUrl:String, restaurantDescription:String, restaurantSlogan:String) {
+    @main(title, user: com.dit.account.User, restaurant: com.dit.Restaurant) {
         <div class=" row">
             <div class="col-md-3 col-sm-3 col-xs-6">
                 <a data-toggle="tooltip" title="6 new members." class="well top-block" href="#">
@@ -47,14 +47,14 @@
             <div class="box col-md-12">
                 <div class="box-inner">
                     <div class="box-header well">
-                        <h2><i class="glyphicon glyphicon-info-sign"></i> About @restaurantName</h2>
+                        <h2><i class="glyphicon glyphicon-info-sign"></i> About @user.getPerson.getRestaurant.getName</h2>
                     </div>
                     <div class="box-content row">
                         <div class="col-lg-7 col-md-12">
-                            <h1>@restaurantName</h1>
-                            <p>@restaurantDescription</p>
+                            <h1>@user.getPerson.getRestaurant.getName</h1>
+                            <p>@user.getPerson.getRestaurant.getDescription</p>
                             <br/>
-                            <p>Url : <a href="@restaurantUrl" target="_blank">@restaurantUrl</a></p>
+                            <p>URL : <a href="@user.getPerson.getRestaurant.getUrl" target="_blank">@user.getPerson.getRestaurant.getUrl</a></p>
                         </div>
 
                     </div>
