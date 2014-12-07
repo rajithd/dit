@@ -1,9 +1,12 @@
 package com.dit;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.LinkedList;
 import java.util.List;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 @Document(collection = "restaurants")
 public class Restaurant {
 
@@ -49,6 +52,9 @@ public class Restaurant {
     }
 
     public List<Zone> getZones() {
+        if (zones == null) {
+            zones = new LinkedList<Zone>();
+        }
         return zones;
     }
 

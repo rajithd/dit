@@ -59,7 +59,13 @@ public class UserServiceImpl implements UserService {
 
 
     @Override
-    public User findByUsernameAndPassword(String username, String password) {
-        return userRepository.findByUsernameAndPassword(username, password);
+    public User findByUsernameAndPasswordAndRestaurant(String username, String password, String regNo) {
+        List<User> users = userRepository.findByUsernameAndPassword(username, password);
+        for (User user : users) {
+            if (regNo.equals(user.getPerson().getRestaurant().getRegNo())) {
+                return user;
+            }
+        }
+        return null;
     }
 }

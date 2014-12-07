@@ -1,7 +1,10 @@
 package com.dit.account;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.util.List;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Role {
 
     private String name;

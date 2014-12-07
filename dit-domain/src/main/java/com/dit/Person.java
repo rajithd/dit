@@ -1,7 +1,10 @@
 package com.dit;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Person {
 
     @Id
@@ -9,6 +12,8 @@ public class Person {
     private String firstName;
     private String lastName;
     private String contactNumber;
+
+    @DBRef
     private Restaurant restaurant;
 
     public String getId() {

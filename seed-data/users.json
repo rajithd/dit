@@ -16,15 +16,10 @@
             "lastName": "Owner",
             "contactNumber": "+94779545015",
             "restaurant": {
-                "_id": {
-                    "$oid": "53758ae21566d055b5c4470c"
-                },
-                "name": "The Sizzle",
-                "description": "Sizzlers probably originated a few centuries ago when meat was served on a heated cast iron plate to keep it piping hot, while the diner ate his meal. Today, however, they have become a cuisine of sorts by themselves as many specialty restaurants serve only Sizzlers on their menu. A sizzler is a combination of a main dish served with a choice of sauces and a large variety of accompaniments, making it a complete meal by itself!",
-                "address": "",
-                "url": "http://www.thesizzle.lk/",
-                "regNo": "sizzle",
-                "slogan": "Sizzlers are a recent 'inno-vention' that consists of an entire meal being served on a cast iron platter, which is in turn placed on a wooden base and served sizzling to your table."
+                "$ref":"restaurants",
+                "$id":{
+                    "$oid":"53758ae21566d055b5c4470c"
+                }
             }
         },
         "roles": [
@@ -53,15 +48,10 @@
             "lastName": "Manager",
             "contactNumber": "+94779545015",
             "restaurant": {
-                "_id": {
-                    "$oid": "53758ae21566d055b5c4470c"
-                },
-                "name": "The Sizzle",
-                "description": "Sizzlers probably originated a few centuries ago when meat was served on a heated cast iron plate to keep it piping hot, while the diner ate his meal. Today, however, they have become a cuisine of sorts by themselves as many specialty restaurants serve only Sizzlers on their menu. A sizzler is a combination of a main dish served with a choice of sauces and a large variety of accompaniments, making it a complete meal by itself!",
-                "address": "",
-                "url": "http://www.thesizzle.lk/",
-                "regNo": "sizzle",
-                "slogan": "Sizzlers are a recent 'inno-vention' that consists of an entire meal being served on a cast iron platter, which is in turn placed on a wooden base and served sizzling to your table."
+                "$ref":"restaurants",
+                "$id":{
+                    "$oid":"53758ae21566d055b5c4470c"
+                }
             }
         },
         "roles": [
@@ -90,15 +80,10 @@
             "lastName": "Staff",
             "contactNumber": "+94779545015",
             "restaurant": {
-                "_id": {
-                    "$oid": "53758ae21566d055b5c4470c"
-                },
-                "name": "The Sizzle",
-                "description": "Sizzlers probably originated a few centuries ago when meat was served on a heated cast iron plate to keep it piping hot, while the diner ate his meal. Today, however, they have become a cuisine of sorts by themselves as many specialty restaurants serve only Sizzlers on their menu. A sizzler is a combination of a main dish served with a choice of sauces and a large variety of accompaniments, making it a complete meal by itself!",
-                "address": "",
-                "url": "http://www.thesizzle.lk/",
-                "regNo": "sizzle",
-                "slogan": "Sizzlers are a recent 'inno-vention' that consists of an entire meal being served on a cast iron platter, which is in turn placed on a wooden base and served sizzling to your table."
+                "$ref":"restaurants",
+                "$id":{
+                    "$oid":"53758ae21566d055b5c4470c"
+                }
             }
         },
         "roles": [
@@ -127,15 +112,10 @@
             "lastName": "Owner",
             "contactNumber": "+94779545015",
             "restaurant": {
-                "_id": {
-                    "$oid": "53758aaaa566d055b5c4470c"
-                },
-                "name": "The Spectrum",
-                "description": "The Spectrum, probably originated a few centuries ago when meat was served on a heated cast iron plate to keep it piping hot, while the diner ate his meal. Today, however, they have become a cuisine of sorts by themselves as many specialty restaurants serve only Sizzlers on their menu. A sizzler is a combination of a main dish served with a choice of sauces and a large variety of accompaniments, making it a complete meal by itself!",
-                "address": "",
-                "url": "https://www.facebook.com/thespectrumcolombo",
-                "regNo": "spectrum",
-                "slogan": "The Spectrum, formerly known as Coco Fresh Bar, is a small waffle bar at the Liberty Arcade. Their waffles were quite ordinary but they do a solid Milo shake."
+                "$ref":"restaurants",
+                "$id":{
+                    "$oid":"53758aaaa566d055b5c4470c"
+                }
             }
         },
         "roles": [
@@ -164,15 +144,10 @@
             "lastName": "Manager",
             "contactNumber": "+94779545015",
             "restaurant": {
-                "_id": {
-                    "$oid": "53758aaaa566d055b5c4470c"
-                },
-                "name": "The Spectrum",
-                "description": "The Spectrum, probably originated a few centuries ago when meat was served on a heated cast iron plate to keep it piping hot, while the diner ate his meal. Today, however, they have become a cuisine of sorts by themselves as many specialty restaurants serve only Sizzlers on their menu. A sizzler is a combination of a main dish served with a choice of sauces and a large variety of accompaniments, making it a complete meal by itself!",
-                "address": "",
-                "url": "https://www.facebook.com/thespectrumcolombo",
-                "regNo": "spectrum",
-                "slogan": "The Spectrum, formerly known as Coco Fresh Bar, is a small waffle bar at the Liberty Arcade. Their waffles were quite ordinary but they do a solid Milo shake."
+                "$ref":"restaurants",
+                "$id":{
+                    "$oid":"53758aaaa566d055b5c4470c"
+                }
             }
         },
         "roles": [
@@ -201,15 +176,10 @@
             "lastName": "Staff",
             "contactNumber": "+94779545015",
             "restaurant": {
-                "_id": {
-                    "$oid": "53758aaaa566d055b5c4470c"
-                },
-                "name": "The Spectrum",
-                "description": "The Spectrum, probably originated a few centuries ago when meat was served on a heated cast iron plate to keep it piping hot, while the diner ate his meal. Today, however, they have become a cuisine of sorts by themselves as many specialty restaurants serve only Sizzlers on their menu. A sizzler is a combination of a main dish served with a choice of sauces and a large variety of accompaniments, making it a complete meal by itself!",
-                "address": "",
-                "url": "https://www.facebook.com/thespectrumcolombo",
-                "regNo": "spectrum",
-                "slogan": "The Spectrum, formerly known as Coco Fresh Bar, is a small waffle bar at the Liberty Arcade. Their waffles were quite ordinary but they do a solid Milo shake."
+                "$ref":"restaurants",
+                "$id":{
+                    "$oid":"53758aaaa566d055b5c4470c"
+                }
             }
         },
         "roles": [

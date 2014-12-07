@@ -11,6 +11,8 @@
     <sec:http pattern="/public/client/authenticate/" security="none"/>
     <sec:http pattern="/public/client/auth/twitter/url/" security="none"/>
 
+    <sec:http pattern="/public/admin/**" security="none"/>
+
     <!-- Secure the rest of the API-->
     <sec:http pattern="/connector/**" use-expressions="true" create-session="never" entry-point-ref="forbiddenFilter">
         <sec:intercept-url pattern="/connector/**" access="isFullyAuthenticated()"/>
