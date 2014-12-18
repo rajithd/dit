@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="SBT: org.springframework.social:spring-social-google:1.0.0.M3">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/social/spring-social-google/1.0.0.M3/spring-social-google-1.0.0.M3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

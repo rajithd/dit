@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="SBT: com.dit:dit-domain:1.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/dit/dit-domain/1.0-SNAPSHOT/dit-domain-1.0-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
