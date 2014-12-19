@@ -4,16 +4,20 @@
 
 var ditControllers = angular.module('ditControllers', []);
 
-ditControllers.controller('indexController', ['$scope', 'Phone', '$http', '$window',
-    function ($scope, Phone, $http, $window) {
+ditControllers.controller('indexController', ['$scope', 'Phone', '$http', '$window', '$rootScope',
+    function ($scope, Phone, $http, $window, $rootScope) {
         $scope.phones = Phone.query();
         $scope.orderProp = 'age';
+
+        console.log($rootScope.name);
+
 
         $scope.facebookClicked = function () {
             alert("facebook clicked");
         };
 
         $scope.twitterClicked = function () {
+//            console.log($rootScope.name);
             var responsePromise = $http.get("http://dev.dit.com:8080/dit-api/public/client/auth/twitter/url");
 
             responsePromise.success(function (data, status, headers, config) {
@@ -38,8 +42,9 @@ ditControllers.controller('PhoneDetailCtrl', ['$scope', '$routeParams', 'Phone',
         };
     }]);
 
-ditControllers.controller('twitterController', ['$scope', '$window', '$http',
-    function ($scope, $window, $http) {
+ditControllers.controller('twitterController', ['$scope', '$window', '$http','$rootScope',
+    function ($scope, $window, $http, $rootScope) {
+        console.log("insideeeeeeeeeee");
         var params = location.search.split('oauth_token=')[1];
         var tokens = params.split('&');
         var oauthToken = tokens[0];
@@ -48,7 +53,8 @@ ditControllers.controller('twitterController', ['$scope', '$window', '$http',
         var responsePromise = $http.get("http://dev.dit.com:8080/dit-api/public/client/auth/twitter/callback?oauth_token=" + oauthToken + "&oauth_verifier=" + oauthVerifier);
 
         responsePromise.success(function (data, status, headers, config) {
-            $window.location.href = "http://www.google.com";
+            $rootScope.name = 'test';
+            $window.location.href = "http://dev.dit.com:8000/app/#/index";
         });
         responsePromise.error(function (data, status, headers, config) {
             console.log("error")

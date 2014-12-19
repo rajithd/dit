@@ -1,12 +1,14 @@
 package com.dit.security;
 
 import com.dit.account.User;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Date;
 
 @Document(collection = "oauth2Tokens")
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class OAuth2Token {
 
     @Id
