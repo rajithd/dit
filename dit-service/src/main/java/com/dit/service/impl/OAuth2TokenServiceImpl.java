@@ -1,5 +1,6 @@
 package com.dit.service.impl;
 
+import com.dit.account.User;
 import com.dit.repository.OAuth2TokenRepository;
 import com.dit.security.OAuth2Token;
 import com.dit.service.OAuth2TokenService;
@@ -27,11 +28,12 @@ public class OAuth2TokenServiceImpl implements OAuth2TokenService {
     }
 
     @Override
-    public OAuth2Token create(String username) {
+    public OAuth2Token create(User user) {
         OAuth2Token oauth2Token = new OAuth2Token();
-        oauth2Token.setUsername(username);
-        oauth2Token.setValue(SecurityUtil.generateHash(username));
+        oauth2Token.setUsername(user.getUsername());
+        oauth2Token.setValue(SecurityUtil.generateHash(user.getUsername()));
         oauth2Token.setExpiryAt(addOneDay());
+        oauth2Token.setUser(user);
         return oauth2Token;
     }
 

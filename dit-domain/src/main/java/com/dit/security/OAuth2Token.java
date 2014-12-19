@@ -1,5 +1,6 @@
 package com.dit.security;
 
+import com.dit.account.User;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -15,6 +16,7 @@ public class OAuth2Token {
     private String username;
     private Date expiryAt;
     private Boolean trusted;
+    private User user;
 
     public String getId() {
         return id;
@@ -62,5 +64,13 @@ public class OAuth2Token {
 
     public void setTrusted(Boolean trusted) {
         this.trusted = trusted;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 }

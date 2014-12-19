@@ -1,6 +1,5 @@
 package com.dit.connector;
 
-import com.dit.dto.OAuth2TokenDto;
 import com.dit.response.Success;
 import com.dit.security.OAuth2Token;
 import com.dit.service.SocialService;
@@ -46,9 +45,8 @@ public class SocialSignInConnector {
 
     @RequestMapping(method = RequestMethod.GET, value = "/facebook/callback")
     @ResponseBody
-    public ResponseEntity getFacebookCallbackUrl(@RequestParam("access_token") String accessToken, HttpServletRequest request) {
-        OAuth2Token oauth2Token = socialService.createFacebookAuthUser(accessToken);
-        return new ResponseEntity<Success>(new Success(modelMapper.map(oauth2Token, OAuth2TokenDto.class)), HttpStatus.OK);
+    public OAuth2Token getFacebookCallbackUrl(@RequestParam("access_token") String accessToken, HttpServletRequest request) {
+        return socialService.createFacebookAuthUser(accessToken);
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/google/url", produces = "application/json")
@@ -59,8 +57,7 @@ public class SocialSignInConnector {
 
     @RequestMapping(method = RequestMethod.GET, value = "/google/callback")
     @ResponseBody
-    public ResponseEntity getGoogleCallbackUrl(@RequestParam("access_token") String accessToken, HttpServletRequest request) {
-        OAuth2Token oauth2Token = socialService.createGoogleAuthUser(accessToken);
-        return new ResponseEntity<Success>(new Success(modelMapper.map(oauth2Token, OAuth2TokenDto.class)), HttpStatus.OK);
+    public OAuth2Token getGoogleCallbackUrl(@RequestParam("access_token") String accessToken, HttpServletRequest request) {
+        return socialService.createGoogleAuthUser(accessToken);
     }
 }

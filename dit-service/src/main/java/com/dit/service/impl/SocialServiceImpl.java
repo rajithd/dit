@@ -86,7 +86,7 @@ public class SocialServiceImpl implements SocialService {
             user = userService.save(user);
             filterUser = user;
         }
-        return oauth2TokenService.save(oauth2TokenService.create(filterUser.getUsername()));
+        return oauth2TokenService.save(oauth2TokenService.create(filterUser));
     }
 
     @Override
@@ -112,7 +112,7 @@ public class SocialServiceImpl implements SocialService {
             user = userService.save(user);
             filterUser = user;
         }
-        return oauth2TokenService.save(oauth2TokenService.create(filterUser.getUsername()));
+        return oauth2TokenService.save(oauth2TokenService.create(filterUser));
     }
 
     @Override
@@ -138,7 +138,7 @@ public class SocialServiceImpl implements SocialService {
             user = userService.save(user);
             filterUser = user;
         }
-        return oauth2TokenService.save(oauth2TokenService.create(filterUser.getUsername()));
+        return oauth2TokenService.save(oauth2TokenService.create(filterUser));
     }
 
     private User filterUser(SocialNetwork socialNetwork, String username) {
