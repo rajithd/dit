@@ -48,8 +48,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<User> findByUserConnectionProviderId(String providerId) {
-        return null;
+    public User findByUserConnectionProviderId(String username, String providerId) {
+        return userRepository.findByUsernameAndProviderId(username, providerId);
     }
 
     @Override

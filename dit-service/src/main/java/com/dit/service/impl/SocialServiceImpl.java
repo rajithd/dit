@@ -27,9 +27,6 @@ import org.springframework.social.oauth2.OAuth2Parameters;
 import org.springframework.social.twitter.api.Twitter;
 import org.springframework.social.twitter.connect.TwitterConnectionFactory;
 import org.springframework.stereotype.Service;
-import org.springframework.util.CollectionUtils;
-
-import java.util.List;
 
 @Service
 public class SocialServiceImpl implements SocialService {
@@ -145,15 +142,6 @@ public class SocialServiceImpl implements SocialService {
     }
 
     private User filterUser(SocialNetwork socialNetwork, String username) {
-        List<User> users = userService.findByUserConnectionProviderId(socialNetwork.name());
-        if(CollectionUtils.isEmpty(users)){
-            return null;
-        }
-        for (User user : users) {
-            if (username.equals(user.getUsername())) {
-                return user;
-            }
-        }
-        return null;
+        return userService.findByUserConnectionProviderId(username,socialNetwork.name());
     }
 }

@@ -9,7 +9,6 @@
         <module>dit-domain</module>
         <module>dit-service</module>
         <module>dit-api</module>
-        <module>dit-javascript</module>
         <module>dit-notification</module>
     </modules>
     <packaging>pom</packaging>

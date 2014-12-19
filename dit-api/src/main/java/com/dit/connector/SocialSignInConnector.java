@@ -34,9 +34,8 @@ public class SocialSignInConnector {
 
     @RequestMapping(method = RequestMethod.GET, value = "/twitter/callback")
     @ResponseBody
-    public ResponseEntity getTwitterCallbackUrl(@RequestParam("oauth_token") String oauthToken, @RequestParam("oauth_verifier") String oauthVerifier, HttpServletRequest request) {
-        OAuth2Token oauth2Token = socialService.createTwitterAuthUser(oauthVerifier);
-        return new ResponseEntity<Success>(new Success(modelMapper.map(oauth2Token, OAuth2TokenDto.class)), HttpStatus.OK);
+    public OAuth2Token getTwitterCallbackUrl(@RequestParam("oauth_token") String oauthToken, @RequestParam("oauth_verifier") String oauthVerifier, HttpServletRequest request) {
+        return socialService.createTwitterAuthUser(oauthVerifier);
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/facebook/url", produces = "application/json")

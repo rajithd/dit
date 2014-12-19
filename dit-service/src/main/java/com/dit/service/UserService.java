@@ -4,8 +4,6 @@ import com.dit.account.User;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.social.connect.UserProfile;
 
-import java.util.List;
-
 public interface UserService extends UserDetailsService {
 
     /**
@@ -46,7 +44,7 @@ public interface UserService extends UserDetailsService {
      * @param providerId
      * @return
      */
-    List<User> findByUserConnectionProviderId(String providerId);
+    User findByUserConnectionProviderId(String username, String providerId);
 
     User findByUsernameAndPasswordAndRestaurant(String username, String password, String regNo);
 
