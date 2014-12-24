@@ -3,13 +3,17 @@
 # ~~~~
 
 # Home page
-GET        /                    controllers.Application.index
-GET        /index               controllers.Application.index
+GET        /                              controllers.Application.index
+GET        /index                         controllers.Application.index
+
+POST       /index                         controllers.Application.search
+
+GET        /restaurant                    controllers.Application.restaurantView
 
 #oauth
 #http://dev.dit.com:9000/oauth/twitter/callback?oauth_token=0lTBIbnfXY1ZqZEIaKfiCHXWO6mMtXBG&oauth_verifier=UR8wBSLeaN2RlpvWdw7URXECb1gK2Yuz
-GET        /oauth/twitter/callback controllers.Oauth.twitterCallBack(oauth_token : String,  oauth_verifier :String)
+GET        /oauth/twitter/callback        controllers.Oauth.twitterCallBack(oauth_token : String,  oauth_verifier :String)
 
 
 # Map static resources from the /public folder to the /assets URL path
-GET        /assets/*file        controllers.Assets.at(path="/public", file)
+GET        /assets/*file                  controllers.Assets.at(path="/public", file)

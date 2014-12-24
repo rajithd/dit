@@ -13,21 +13,44 @@
                     <div class="item active" style="background-image: url(@routes.Assets.at("images/slider/bg1.jpg"))">
                         <div class="container">
                             <div class="row slide-margin">
-                                <div class="col-sm-6">
+                                <div class="col-sm-8">
                                     <div class="carousel-content">
                                         <h1 class="animation animated-item-1">The easy way of restaurant reservation </h1>
                                         <h2 class="animation animated-item-2">Find a restaurant >> Book Online</h2>
-                                        <a class="btn-slide animation animated-item-3" href="#">Read More</a>
+                                        <button type="button" class="btn btn-danger">Read more</button>
+
+                                        <br/>
+                                        <br/>
+                                        <h1>Make a free reservation</h1>
+                                        <form class="form-inline" action="@routes.Application.search()" method="post">
+                                            <div class="form-group">
+                                                <div class='input-group date' id='datetimepicker1'>
+                                                    <input id="datePicker" name="reservedDate" type='date' class="form-control" />
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class='input-group date' id='restaurant'>
+                                                    <input type="text" class="form-control" id="restaurant" name="restaurant" placeholder="Restaurant">
+                                                    <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="btn btn-danger">Find a Table</button>
+                                        </form>
                                     </div>
+
                                 </div>
 
-                                <div class="col-sm-6 hidden-xs animation animated-item-4">
-                                    <div class="slider-img">
+                                <div class="col-sm-4 hidden-xs animation animated-item-4">
+                                    <div class="slider-img" style="margin-top: 45px">
                                         <img src="@routes.Assets.at("images/slider/img1.png")" class="img-responsive">
                                     </div>
                                 </div>
 
                             </div>
+
                         </div>
                     </div><!--/.item-->
 

@@ -1,11 +1,9 @@
 package com.dit.connector;
 
-import com.dit.Restaurant;
-import com.dit.Zone;
+import com.dit.*;
 import com.dit.account.User;
 import com.dit.response.Success;
-import com.dit.service.RestaurantService;
-import com.dit.service.UserService;
+import com.dit.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,6 +20,14 @@ public class AdminConnector {
     private RestaurantService restaurantService;
     @Autowired
     private UserService userService;
+    @Autowired
+    private OwnerService ownerService;
+    @Autowired
+    private StaffService staffService;
+    @Autowired
+    private ManagerService managerService;
+    @Autowired
+    private PersonFactory personFactory;
 
     @RequestMapping(method = RequestMethod.GET, value = "/user/{username}/{password}/{regNo}", produces = "application/json")
     @ResponseBody
@@ -48,6 +54,41 @@ public class AdminConnector {
             }
         }
         return null;
+    }
+
+    @RequestMapping(method = RequestMethod.POST, value = "/{userId}/create/user/{role}", produces = "application/json")
+    @ResponseBody
+    public ResponseEntity createUser(@PathVariable("userId") String userId, @PathVariable("role") String role, @RequestBody User user) {
+        User authUser = userService.findById(userId);
+        Person person = user.getPerson();
+        person.setRestaurant(authUser.getPerson().getRestaurant());
+
+        Person factoryPerson = personFactory.personFactory(role);
+        factoryPerson.setFirstName(person.getFirstName());
+        factoryPerson.setLastName(person.getLastName());
+        Person savedPerson = null;
+        if (factoryPerson instanceof Owner) {
+            Owner owner = new Owner();
+            owner.setFirstName(factoryPerson.getFirstName());
+            owner.setLastName(factoryPerson.getLastName());
+            owner.setRestaurant(authUser.getPerson().getRestaurant());
+            savedPerson = ownerService.save(owner);
+        } else if (factoryPerson instanceof Manager) {
+            Manager manager = new Manager();
+            manager.setFirstName(factoryPerson.getFirstName());
+            manager.setLastName(factoryPerson.getLastName());
+            manager.setRestaurant(authUser.getPerson().getRestaurant());
+            savedPerson = managerService.save(manager);
+        } else if (factoryPerson instanceof Staff) {
+            Staff staff = new Staff();
+            staff.setFirstName(factoryPerson.getFirstName());
+            staff.setLastName(factoryPerson.getLastName());
+            staff.setRestaurant(authUser.getPerson().getRestaurant());
+            savedPerson = staffService.save(staff);
+        }
+        user.setPerson(savedPerson);
+        return new ResponseEntity<Success>(new Success(userService.save(user)), HttpStatus.OK);
+
     }
 
 }
