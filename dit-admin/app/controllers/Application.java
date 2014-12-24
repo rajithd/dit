@@ -13,10 +13,7 @@ import play.data.DynamicForm;
 import play.mvc.Controller;
 import play.mvc.Result;
 import util.HttpConnector;
-import views.html.index;
-import views.html.table;
-import views.html.users;
-import views.html.zones;
+import views.html.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -118,6 +115,14 @@ public class Application extends Controller {
         role.setPermissions(permissions);
         roles.add(role);
         return roles;
+    }
+
+    public static Result reports() {
+        User user = (User) Cache.get("user");
+        if (user == null) {
+            return redirect(routes.LoginController.login());
+        }
+        return ok(reports.render("Reports", user, user.getPerson().getRestaurant()));
     }
 
 }

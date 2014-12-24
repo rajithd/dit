@@ -201,7 +201,7 @@ if ($("#donutchart").length) {
 
 // we use an inline data source in the example, usually data would
 // be fetched from a server
-var data = [], totalPoints = 300;
+var data = [], totalPoints = 1000;
 
 function getRandomData() {
     if (data.length > 0)

@@ -19,5 +19,7 @@ GET         /tables/:zoneId        controllers.Application.getTableStructure(zon
 GET         /users                 controllers.Application.users
 POST        /users                 controllers.Application.userSubmit
 
+GET         /reports                controllers.Application.reports
+
 # Map static resources from the /public folder to the /assets URL path
 GET         /assets/*file          controllers.Assets.at(path="/public", file)

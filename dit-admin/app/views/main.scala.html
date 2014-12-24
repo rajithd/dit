@@ -129,8 +129,10 @@
                                     class="glyphicon glyphicon-user"></i><span> Create Users</span></a></li>
                                 }
 
-                                <li><a class="ajax-link" href="chart.html"><i class="glyphicon glyphicon-list-alt"></i><span> Reports</span></a>
-                                </li>
+                                @if(user.getRoles().get(0).getPermissions().get(0).name() == "OWNER" || user.getRoles().get(0).getPermissions().get(0).name() == "MANAGER"){
+                                    <li><a class="ajax-link" href="http://localhost:9000/reports"><i class="glyphicon glyphicon-list-alt"></i><span> Reports</span></a>
+                                    </li>
+                                }
 
                                 <li class="nav-header hidden-md">Zone Section</li>
                                 @for(zone <- restaurant.getZones){
