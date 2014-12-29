@@ -28,6 +28,8 @@ public class AdminConnector {
     private ManagerService managerService;
     @Autowired
     private PersonFactory personFactory;
+    @Autowired
+    private MenuService menuService;
 
     @RequestMapping(method = RequestMethod.GET, value = "/user/{username}/{password}/{regNo}", produces = "application/json")
     @ResponseBody
@@ -89,6 +91,30 @@ public class AdminConnector {
         user.setPerson(savedPerson);
         return new ResponseEntity<Success>(new Success(userService.save(user)), HttpStatus.OK);
 
+    }
+
+    @RequestMapping(value = "/{restaurantId}/menus", method = RequestMethod.POST, produces = "application/json")
+    @ResponseBody
+    public Menu createMenu(@PathVariable("restaurantId") String restaurantId, @RequestBody Menu menu) {
+        Restaurant restaurant = restaurantService.findById(restaurantId);
+        Menu savedMenu = menuService.save(menu);
+        restaurant.getMenus().add(savedMenu);
+        restaurantService.save(restaurant);
+        return savedMenu;
+    }
+
+    @RequestMapping(value = "/menus/{id}", method = RequestMethod.GET, produces = "application/json")
+    @ResponseBody
+    public Menu getMenuById(@PathVariable("id") String menuId) {
+        return menuService.findById(menuId);
+    }
+
+    @RequestMapping(value = "/menus/{id}", method = RequestMethod.PUT, produces = "application/json")
+    @ResponseBody
+    public Menu updateMenu(@PathVariable("id") String id ,@RequestBody MenuItem menuItem) {
+        Menu menu = menuService.findById(id);
+        menu.getMenuItems().add(menuItem);
+        return menuService.save(menu);
     }
 
 }

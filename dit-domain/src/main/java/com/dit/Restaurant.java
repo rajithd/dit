@@ -1,6 +1,7 @@
 package com.dit;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.LinkedList;
@@ -18,6 +19,8 @@ public class Restaurant {
     private String url;
     private String regNo;
     private String slogan;
+    @DBRef
+    private List<Menu> menus;
 
     public String getId() {
         return id;
@@ -84,5 +87,16 @@ public class Restaurant {
 
     public void setSlogan(String slogan) {
         this.slogan = slogan;
+    }
+
+    public List<Menu> getMenus() {
+        if (menus == null) {
+            menus = new LinkedList<Menu>();
+        }
+        return menus;
+    }
+
+    public void setMenus(List<Menu> menus) {
+        this.menus = menus;
     }
 }
