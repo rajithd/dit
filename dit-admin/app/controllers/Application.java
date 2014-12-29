@@ -1,5 +1,7 @@
 package controllers;
 
+import com.dit.Menu;
+import com.dit.MenuItem;
 import com.dit.Person;
 import com.dit.Zone;
 import com.dit.account.Permission;
@@ -123,6 +125,56 @@ public class Application extends Controller {
             return redirect(routes.LoginController.login());
         }
         return ok(reports.render("Reports", user, user.getPerson().getRestaurant()));
+    }
+
+    public static Result menus() {
+        User user = (User) Cache.get("user");
+        if (user == null) {
+            return redirect(routes.LoginController.login());
+        }
+        return ok(menus.render("Menus", user, user.getPerson().getRestaurant(), new Menu()));
+    }
+
+    public static Result menuSubmit() throws Exception {
+        User user = (User) Cache.get("user");
+        DynamicForm dynamicForm = form().bindFromRequest();
+        String menuName = dynamicForm.get("menuName");
+
+        Menu menu = new Menu();
+        menu.setName(menuName);
+
+        HttpConnector httpConnector = new HttpConnector();
+        httpConnector.doPostJson(menu, "http://localhost:8080/dit-api/public/admin/" + user.getPerson().getRestaurant().getId() + "/menus/");
+
+        return ok(menus.render("Menus", user, user.getPerson().getRestaurant(), menu));
+    }
+
+    public static Result getMenuById(String menuId) throws Exception {
+        User user = (User) Cache.get("user");
+        if (user == null) {
+            return redirect(routes.LoginController.login());
+        }
+
+        Cache.set("menuId", menuId, 3600*20*20);
+        HttpConnector httpConnector = new HttpConnector();
+        Menu menu = httpConnector.doGet("http://localhost:8080/dit-api/public/admin/menus/" + menuId, Menu.class);
+        return ok(menus.render("Menus", user, user.getPerson().getRestaurant(), menu));
+    }
+
+    public static Result itemSubmit() throws Exception {
+        User user = (User) Cache.get("user");
+        String menuId = (String) Cache.get("menuId");
+        DynamicForm dynamicForm = form().bindFromRequest();
+        Logger.info("Saving menu : " + menuId);
+
+        MenuItem menuItem = new MenuItem();
+        menuItem.setName(dynamicForm.get("itemName"));
+        menuItem.setDescription(dynamicForm.get("itemDescription"));
+        menuItem.setPrice(Double.parseDouble(dynamicForm.get("itemPrice")));
+
+        HttpConnector httpConnector = new HttpConnector();
+        httpConnector.doPutJson(menuItem, "http://localhost:8080/dit-api/public/admin/menus/" + menuId);
+        return ok(menus.render("Menus", user, user.getPerson().getRestaurant(), new Menu()));
     }
 
 }

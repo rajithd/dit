@@ -2,3 +2,6 @@ This is your new Play application
 =================================
 
 This file will be packaged with your application, when using `activator dist`.
+
+
+sample menu : http://www.opentable.com/floataway-cafe?DateTime=2014-12-27%2019%3A00&Covers=2&OnlyOffers=false&RestaurantIDs=5535&MetroId=16

@@ -127,9 +127,11 @@ public class HttpConnector {
         return IOUtils.toString(response.getEntity().getContent());
     }
 
-    public <T> String  doPutJson(T request, String url, Class<T> valueType) throws Exception {
+    public <T> String  doPutJson(T request, String url) throws Exception {
         HttpPut put = new HttpPut(url);
         put.addHeader("Content-Type", "application/json");
+        StringEntity params = objectToEntity(request);
+        put.setEntity(params);
         HttpResponse response = client.execute(put);
 
         if (response.getStatusLine().getStatusCode() != 200) {

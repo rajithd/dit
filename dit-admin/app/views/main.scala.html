@@ -134,11 +134,22 @@
                                     </li>
                                 }
 
+                                @if(user.getRoles().get(0).getPermissions().get(0).name() == "OWNER" || user.getRoles().get(0).getPermissions().get(0).name() == "MANAGER"){
+                                    <li><a class="ajax-link" href="http://localhost:9000/menus"><i class="glyphicon glyphicon-th"></i><span> Menus</span></a>
+                                    </li>
+                                }
+
                                 <li class="nav-header hidden-md">Zone Section</li>
                                 @for(zone <- restaurant.getZones){
                                     <li><a class="ajax-link" href="http://localhost:9000/tables/@zone.getId"><i class="glyphicon glyphicon-align-justify"></i><span> @zone.getName</span></a>
                                     </li>
 
+                                }
+
+                                <li class="nav-header hidden-md">Menu Section</li>
+                                @for(menu <- restaurant.getMenus) {
+                                    <li><a class="ajax-link" href="http://localhost:9000/menus/@menu.getId"><i class="glyphicon glyphicon-align-justify"></i> <span> @menu.getName</span></a>
+                                    </li>
                                 }
                                 @*<li class="accordion">*@
                                     @*<a href="#"><i class="glyphicon glyphicon-plus"></i><span> Accordion Menu</span></a>*@
