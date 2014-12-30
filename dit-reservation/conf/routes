@@ -3,17 +3,21 @@
 # ~~~~
 
 # Home page
-GET        /                              controllers.Application.index
-GET        /index                         controllers.Application.index
+GET         /                                            controllers.Application.index
+GET         /index                                       controllers.Application.index
 
-POST       /index                         controllers.Application.search
+GET         /logout                                      controllers.Application.logout
 
-GET        /restaurant                    controllers.Application.restaurantView
+POST        /index                                       controllers.Application.search
+
+GET         /restaurant                                  controllers.Application.restaurantView
 
 #oauth
-#http://dev.dit.com:9000/oauth/twitter/callback?oauth_token=0lTBIbnfXY1ZqZEIaKfiCHXWO6mMtXBG&oauth_verifier=UR8wBSLeaN2RlpvWdw7URXECb1gK2Yuz
-GET        /oauth/twitter/callback        controllers.Oauth.twitterCallBack(oauth_token : String,  oauth_verifier :String)
+#http://dev.dit.com:9001/oauth/twitter/callback?oauth_token=0lTBIbnfXY1ZqZEIaKfiCHXWO6mMtXBG&oauth_verifier=UR8wBSLeaN2RlpvWdw7URXECb1gK2Yuz
+GET         /oauth/twitter/callback                      controllers.Oauth.twitterCallBack(oauth_token : String,  oauth_verifier :String)
 
+#http://dev.dit.com:9001/oauth/facebook/callback?#access_token=CAAV8PZAtqAIUBAM8j36r9qSBewmSNsZC4x9hsYmsBm7IDNWZAurTlK3TWU5XgbHBbIffHd3xunqYItBh84h5LL2PRX5uqd0DlGMYXeasuxJu1A8FCf5Ph2c7K6fw4pMwblVO47YFV75yKLIv3ek84Vi4maVOcxWeimP8AUmlP8dybZBgZBfba1vi9i5wnNb8oWo1ATYuyuEDxh9lRhxShHHbwNXD6HzMZD&expires_in=5042
+GET         /oauth/facebook/callback/:accessToken        controllers.Oauth.facebookCallBack(accessToken : String)
 
 # Map static resources from the /public folder to the /assets URL path
-GET        /assets/*file                  controllers.Assets.at(path="/public", file)
+GET         /assets/*file                                controllers.Assets.at(path="/public", file)

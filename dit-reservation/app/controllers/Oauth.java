@@ -27,4 +27,15 @@ public class Oauth extends Controller {
         return redirect(routes.Application.index());
     }
 
+    public static Result facebookCallBack(String accessToken) throws Exception {
+        Config conf = ConfigFactory.load();
+        String url = conf.getString("facebook.callback.url");
+        Logger.info("accessToken ==> " + accessToken);
+        HttpConnector httpConnector = new HttpConnector();
+        OAuth2Token token = httpConnector.doGet(url + "?access_token=" +  accessToken, OAuth2Token.class);
+        Cache.set("token", token, 3600 * 60 * 60 * 60);
+
+        return redirect(routes.Application.index());
+    }
+
 }

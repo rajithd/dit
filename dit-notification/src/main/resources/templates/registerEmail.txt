@@ -1,0 +1,4 @@
+Dear <name>,
+You are successfully registered to Dine In Table Reservation.
+Sincerely,
+DIT team.

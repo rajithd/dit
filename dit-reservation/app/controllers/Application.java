@@ -35,4 +35,9 @@ public class Application extends Controller {
         return redirect(routes.Application.restaurantView());
 
     }
+
+    public static Result logout() {
+        Cache.set("token", null);
+        return redirect(routes.Application.index());
+    }
 }

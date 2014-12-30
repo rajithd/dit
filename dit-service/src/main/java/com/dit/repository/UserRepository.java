@@ -18,4 +18,6 @@ public interface UserRepository extends MongoRepository<User, String> {
     @Query("{'username':?0, 'userConnection.providerId':?1}")
     User findByUsernameAndProviderId(String username, String providerId);
 
+    User findByEmail(String email);
+
 }

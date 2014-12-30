@@ -1,11 +1,9 @@
 package com.dit.service.impl;
 
+import com.dit.Notification;
 import com.dit.account.User;
 import com.dit.security.OAuth2Token;
-import com.dit.service.OAuth2TokenService;
-import com.dit.service.SocialService;
-import com.dit.service.UserConnectionService;
-import com.dit.service.UserService;
+import com.dit.service.*;
 import com.dit.social.SocialNetwork;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -27,6 +25,8 @@ import org.springframework.social.oauth2.OAuth2Parameters;
 import org.springframework.social.twitter.api.Twitter;
 import org.springframework.social.twitter.connect.TwitterConnectionFactory;
 import org.springframework.stereotype.Service;
+
+import java.util.Collections;
 
 @Service
 public class SocialServiceImpl implements SocialService {
@@ -56,6 +56,9 @@ public class SocialServiceImpl implements SocialService {
 
     @Autowired
     private OAuth2TokenService oauth2TokenService;
+
+    @Autowired
+    private NotificationService notificationService;
 
     @Override
     public String buildTwitterAuthUrl() {
@@ -104,7 +107,7 @@ public class SocialServiceImpl implements SocialService {
         UserProfile userProfile = connection.fetchUserProfile();
 
         //validate the user is exists or not
-        User filterUser = filterUser(SocialNetwork.FACEBOOK, userProfile.getUsername());
+        User filterUser = userService.findByEmail(userProfile.getEmail());
         if (filterUser == null) {
             //then create a user and oauth token
             User user = userService.buildUser(userProfile);
@@ -112,6 +115,10 @@ public class SocialServiceImpl implements SocialService {
             user = userService.save(user);
             filterUser = user;
         }
+        filterUser.setUsername(userProfile.getEmail());
+
+        Notification notification = NotificationFactory.buildNotification(filterUser, Collections.<String, String>emptyMap());
+        notificationService.publishMessage(notification);
         return oauth2TokenService.save(oauth2TokenService.create(filterUser));
     }
 

@@ -48,4 +48,6 @@ public interface UserService extends UserDetailsService {
 
     User findByUsernameAndPasswordAndRestaurant(String username, String password, String regNo);
 
+    User findByEmail(String email);
+
 }

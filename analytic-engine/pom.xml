@@ -7,10 +7,10 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>dit-notification</artifactId>
+    <artifactId>analytic-engine</artifactId>
     <packaging>jar</packaging>
 
-    <name>dit-notification</name>
+    <name>analytic-engine</name>
     <url>http://maven.apache.org</url>
 
     <properties>
