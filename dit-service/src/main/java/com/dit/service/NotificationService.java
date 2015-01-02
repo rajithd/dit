@@ -1,9 +1,7 @@
 package com.dit.service;
 
-import com.dit.Notification;
-
 public interface NotificationService {
 
-    public void publishMessage(Notification notification);
+    public void publishMessage(Object object, String key);
 
 }

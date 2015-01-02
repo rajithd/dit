@@ -171,6 +171,8 @@ public class Application extends Controller {
         menuItem.setName(dynamicForm.get("itemName"));
         menuItem.setDescription(dynamicForm.get("itemDescription"));
         menuItem.setPrice(Double.parseDouble(dynamicForm.get("itemPrice")));
+        String ingredientsStr = dynamicForm.get("ingredients");
+        menuItem.setIngredients(ingredientsStr.split(","));
 
         HttpConnector httpConnector = new HttpConnector();
         httpConnector.doPutJson(menuItem, "http://localhost:8080/dit-api/public/admin/menus/" + menuId);

@@ -8,6 +8,7 @@ public class MenuItem {
     private String name;
     private String description;
     private Double price;
+    private String[] ingredients;
 
     public String getName() {
         return name;
@@ -31,5 +32,13 @@ public class MenuItem {
 
     public void setPrice(Double price) {
         this.price = price;
+    }
+
+    public String[] getIngredients() {
+        return ingredients;
+    }
+
+    public void setIngredients(String[] ingredients) {
+        this.ingredients = ingredients;
     }
 }

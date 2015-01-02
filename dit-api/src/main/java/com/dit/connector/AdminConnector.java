@@ -111,10 +111,15 @@ public class AdminConnector {
 
     @RequestMapping(value = "/menus/{id}", method = RequestMethod.PUT, produces = "application/json")
     @ResponseBody
-    public Menu updateMenu(@PathVariable("id") String id ,@RequestBody MenuItem menuItem) {
+    public Menu updateMenu(@PathVariable("id") String id, @RequestBody MenuItem menuItem) {
         Menu menu = menuService.findById(id);
         menu.getMenuItems().add(menuItem);
         return menuService.save(menu);
     }
 
+    @RequestMapping(value = "/restaurant/{regNo}", method = RequestMethod.GET, produces = "application/json")
+    @ResponseBody
+    public Restaurant getRestaurantById(@PathVariable("regNo") String regNo) {
+        return restaurantService.findByRegNo(regNo);
+    }
 }

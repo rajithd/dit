@@ -2,59 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7bff472-acfd-4531-b508-c3dfb264b0c5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dit-domain/src/main/java/com/dit/Notification.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dit-service/src/main/java/com/dit/service/impl/NotificationFactory.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dit-service/src/main/java/com/dit/service/NotificationService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dit-service/src/main/java/com/dit/service/impl/NotificationServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dit-service/src/main/java/com/dit/service/amqp/RabbitGateway.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dit-notification/.idea/libraries/SBT___scala_compiler_bundle_2_11_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dit-notification/.idea/libraries/SBT__ch_qos_logback_logback_classic_1_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dit-notification/.idea/libraries/SBT__ch_qos_logback_logback_core_1_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dit-notification/.idea/libraries/SBT__com_fasterxml_jackson_core_jackson_annotations_2_3_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dit-notification/.idea/libraries/SBT__com_fasterxml_jackson_core_jackson_core_2_3_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dit-notification/.idea/libraries/SBT__com_fasterxml_jackson_core_jackson_databind_2_3_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dit-notification/.idea/libraries/SBT__com_rabbitmq_amqp_client_3_3_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dit-notification/.idea/libraries/SBT__com_thoughtworks_paranamer_paranamer_2_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dit-notification/.idea/libraries/SBT__com_typesafe_akka_akka_actor_2_11_2_3_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dit-notification/.idea/libraries/SBT__com_typesafe_akka_akka_slf4j_2_11_2_3_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dit-notification/.idea/libraries/SBT__com_typesafe_akka_akka_testkit_2_11_2_3_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dit-notification/.idea/libraries/SBT__com_typesafe_config_1_2_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dit-notification/.idea/libraries/SBT__javax_activation_activation_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dit-notification/.idea/libraries/SBT__javax_mail_mail_1_5_0_b01.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dit-notification/.idea/libraries/SBT__org_antlr_ST4_4_0_8.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dit-notification/.idea/libraries/SBT__org_antlr_antlr_runtime_3_5_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dit-notification/.idea/libraries/SBT__org_json4s_json4s_ast_2_11_3_2_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dit-notification/.idea/libraries/SBT__org_json4s_json4s_core_2_11_3_2_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dit-notification/.idea/libraries/SBT__org_json4s_json4s_jackson_2_11_3_2_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dit-notification/.idea/libraries/SBT__org_scala_lang_modules_scala_parser_combinators_2_11_1_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dit-notification/.idea/libraries/SBT__org_scala_lang_modules_scala_xml_2_11_1_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dit-notification/.idea/libraries/SBT__org_scala_lang_scala_compiler_2_11_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dit-notification/.idea/libraries/SBT__org_scala_lang_scala_library_2_11_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dit-notification/.idea/libraries/SBT__org_scala_lang_scala_reflect_2_11_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dit-notification/.idea/libraries/SBT__org_scala_lang_scalap_2_11_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dit-notification/.idea/libraries/SBT__org_scalatest_scalatest_2_11_2_1_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dit-notification/.idea/libraries/SBT__org_slf4j_slf4j_api_1_7_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dit-api/src/main/webapp/WEB-INF/dit-api-rabbit.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dit-notification/.idea/modules/dit-notification-build.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dit-notification/.idea/modules/dit-notification.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../analytic-engine/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dit-notification/src/main/resources/templates/registerEmail.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../dit-notification/.idea/sbt.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../dit-notification/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../dit-notification/src/main/java/com/dit/App.java" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../analytic-engine/src/main/java/com/dit/engine/boot/Boot.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../analytic-engine/src/main/java/com/dit/engine/service/EventConsumer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../analytic-engine/src/main/assembly/distribution.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../analytic-engine/src/main/resources/engine-context.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../analytic-engine/src/main/resources/engine.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../assembly/installer.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../analytic-engine/src/main/resources/log4j.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dit-api/src/main/java/com/dit/connector/AdminConnector.java" afterPath="$PROJECT_DIR$/../dit-api/src/main/java/com/dit/connector/AdminConnector.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dit-admin/app/controllers/Application.java" afterPath="$PROJECT_DIR$/../dit-admin/app/controllers/Application.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/Application.java" afterPath="$PROJECT_DIR$/app/controllers/Application.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/Oauth.java" afterPath="$PROJECT_DIR$/app/controllers/Oauth.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README" afterPath="$PROJECT_DIR$/README" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dit-domain/src/main/java/com/dit/MenuItem.java" afterPath="$PROJECT_DIR$/../dit-domain/src/main/java/com/dit/MenuItem.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dit-service/src/main/java/com/dit/service/NotificationService.java" afterPath="$PROJECT_DIR$/../dit-service/src/main/java/com/dit/service/NotificationService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dit-service/src/main/java/com/dit/service/impl/NotificationServiceImpl.java" afterPath="$PROJECT_DIR$/../dit-service/src/main/java/com/dit/service/impl/NotificationServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dit-service/src/main/java/com/dit/service/amqp/RabbitGateway.java" afterPath="$PROJECT_DIR$/../dit-service/src/main/java/com/dit/service/amqp/RabbitGateway.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dit-service/src/main/java/com/dit/repository/RestaurantRepository.java" afterPath="$PROJECT_DIR$/../dit-service/src/main/java/com/dit/repository/RestaurantRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dit-service/src/main/java/com/dit/service/RestaurantService.java" afterPath="$PROJECT_DIR$/../dit-service/src/main/java/com/dit/service/RestaurantService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dit-service/src/main/java/com/dit/service/impl/RestaurantServiceImpl.java" afterPath="$PROJECT_DIR$/../dit-service/src/main/java/com/dit/service/impl/RestaurantServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dit-service/src/main/java/com/dit/service/impl/SocialServiceImpl.java" afterPath="$PROJECT_DIR$/../dit-service/src/main/java/com/dit/service/impl/SocialServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dit-service/src/main/java/com/dit/repository/UserRepository.java" afterPath="$PROJECT_DIR$/../dit-service/src/main/java/com/dit/repository/UserRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dit-service/src/main/java/com/dit/service/UserService.java" afterPath="$PROJECT_DIR$/../dit-service/src/main/java/com/dit/service/UserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dit-service/src/main/java/com/dit/service/impl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/../dit-service/src/main/java/com/dit/service/impl/UserServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/application.conf" afterPath="$PROJECT_DIR$/conf/application.conf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dit-api/src/main/resources/dit.properties" afterPath="$PROJECT_DIR$/../dit-api/src/main/resources/dit.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/custom/document-ready.js" afterPath="$PROJECT_DIR$/public/javascripts/custom/document-ready.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../pom.xml" afterPath="$PROJECT_DIR$/../pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/root.iml" afterPath="$PROJECT_DIR$/.idea/modules/root.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/main.scala.html" afterPath="$PROJECT_DIR$/app/views/main.scala.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dit-admin/app/views/menus.scala.html" afterPath="$PROJECT_DIR$/../dit-admin/app/views/menus.scala.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../analytic-engine/pom.xml" afterPath="$PROJECT_DIR$/../analytic-engine/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/restaurant.scala.html" afterPath="$PROJECT_DIR$/app/views/restaurant.scala.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/routes" afterPath="$PROJECT_DIR$/conf/routes" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dit-notification/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../dit-notification/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="dit-admin.iws" />
@@ -109,8 +80,8 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties converted="true" />
     <breakpoint_rules converted="true" />
+    <ui_properties converted="true" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -122,7 +93,7 @@
         <entry file="file://$PROJECT_DIR$/app/views/index.scala.html">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="10320">
-              <caret line="40" column="48" selection-start-line="24" selection-start-column="40" selection-end-line="40" selection-end-column="47" />
+              <caret line="39" column="110" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="110" />
               <folding />
             </state>
           </provider>
@@ -131,8 +102,18 @@
       <file leaf-file-name="routes" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/conf/routes">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
-              <caret line="8" column="85" selection-start-line="8" selection-start-column="85" selection-end-line="8" selection-end-column="85" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="465">
+              <caret line="14" column="90" selection-start-line="14" selection-start-column="90" selection-end-line="14" selection-end-column="90" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Menu.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/com/dit/dit-domain/1.0-SNAPSHOT/dit-domain-1.0-SNAPSHOT.jar!/com/dit/Menu.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="495">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -141,18 +122,8 @@
       <file leaf-file-name="main.scala.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/main.scala.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="2070">
-              <caret line="14" column="62" selection-start-line="14" selection-start-column="62" selection-end-line="14" selection-end-column="62" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="oauth.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/custom/oauth.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="720">
-              <caret line="32" column="69" selection-start-line="32" selection-start-column="69" selection-end-line="32" selection-end-column="69" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="555" max-vertical-offset="2295">
+              <caret line="37" column="17" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -161,8 +132,18 @@
       <file leaf-file-name="Application.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.79812205" vertical-offset="0" max-vertical-offset="639">
-              <caret line="43" column="56" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+            <state vertical-scroll-proportion="1.0063897" vertical-offset="0" max-vertical-offset="765">
+              <caret line="53" column="52" selection-start-line="53" selection-start-column="52" selection-end-line="53" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="restaurant.template.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/target/scala-2.11/twirl/main/views/html/restaurant.template.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2100" max-vertical-offset="2445">
+              <caret line="140" column="6" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -171,8 +152,8 @@
       <file leaf-file-name="Oauth.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/Oauth.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
-              <caret line="35" column="55" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="55" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="705">
+              <caret line="34" column="106" selection-start-line="33" selection-start-column="8" selection-end-line="34" selection-end-column="106" />
               <folding />
             </state>
           </provider>
@@ -182,7 +163,7 @@
         <entry file="file://$PROJECT_DIR$/conf/application.conf">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="576" max-vertical-offset="1215">
-              <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="21" />
+              <caret line="73" column="89" selection-start-line="73" selection-start-column="23" selection-end-line="73" selection-end-column="89" />
               <folding />
             </state>
           </provider>
@@ -191,28 +172,18 @@
       <file leaf-file-name="restaurant.scala.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/restaurant.scala.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="8940">
-              <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1740">
+              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README">
+      <file leaf-file-name="Restaurant.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/com/dit/dit-domain/1.0-SNAPSHOT/dit-domain-1.0-SNAPSHOT.jar!/com/dit/Restaurant.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="165">
-              <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="document-ready.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/custom/document-ready.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="450">
-              <caret line="15" column="96" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="945">
+              <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -238,13 +209,13 @@
         <option value="$MAVEN_REPOSITORY$/com/dit/dit-domain/1.0-SNAPSHOT/dit-domain-1.0-SNAPSHOT.jar!/com/dit/security/OAuth2Token.class" />
         <option value="$PROJECT_DIR$/public/javascripts/typeahead.bundle.js" />
         <option value="$PROJECT_DIR$/public/javascripts/custom/sample.js" />
-        <option value="$PROJECT_DIR$/app/views/main.scala.html" />
         <option value="$PROJECT_DIR$/app/views/index.scala.html" />
-        <option value="$PROJECT_DIR$/app/views/restaurant.scala.html" />
         <option value="$PROJECT_DIR$/README" />
         <option value="$PROJECT_DIR$/public/javascripts/custom/document-ready.js" />
         <option value="$PROJECT_DIR$/conf/application.conf" />
         <option value="$PROJECT_DIR$/app/controllers/Oauth.java" />
+        <option value="$PROJECT_DIR$/app/views/main.scala.html" />
+        <option value="$PROJECT_DIR$/app/views/restaurant.scala.html" />
         <option value="$PROJECT_DIR$/conf/routes" />
         <option value="$PROJECT_DIR$/app/controllers/Application.java" />
       </list>
@@ -303,6 +274,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SBT: com.dit:dit-domain:1.0-SNAPSHOT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dit-domain-1.0-SNAPSHOT.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dit-reservation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="dit-reservation" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -342,10 +331,6 @@
               <option name="myItemId" value="twirl" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -362,38 +347,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="scala-2.11" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dit-reservation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dit-reservation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stylesheets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dit-reservation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dit-reservation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -443,24 +396,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dit-reservation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dit-reservation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -482,6 +417,22 @@
     <property name="LayoutCode.rearrangeEntriesJava" value="false" />
     <property name="LayoutCode.rearrangeEntriesPlay2Template" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="140" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="142" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="146" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="940" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="140" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="142" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="146" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="940" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -718,21 +669,6 @@
       <setting name="showProgressMessages" value="true" />
       <method />
     </configuration>
-    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <extension name="scalaCoverage" />
-      <module name="" />
-      <setting name="path" value="" />
-      <setting name="package" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workingDirectory" value="$PROJECT_DIR$" />
-      <setting name="searchForTest" value="Across module dependencies" />
-      <setting name="testName" value="" />
-      <setting name="testKind" value="Class" />
-      <setting name="showProgressMessages" value="true" />
-      <method />
-    </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -751,6 +687,21 @@
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <extension name="scalaCoverage" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="$PROJECT_DIR$" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
       <method />
     </configuration>
     <list size="0" />
@@ -824,16 +775,17 @@
       <workItem from="1418994719260" duration="760000" />
       <workItem from="1419397117284" duration="6084000" />
       <workItem from="1419848349952" duration="4662000" />
-      <workItem from="1419959671381" duration="858000" />
+      <workItem from="1419959671381" duration="6781000" />
+      <workItem from="1420025790240" duration="848000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26739000" />
+    <option name="totallyTimeSpent" value="33510000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="808" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -844,7 +796,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289855" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289855" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -884,20 +836,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/font-awesome-4.2.0/css/font-awesome.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="25170">
-          <caret line="16" column="66" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="36274" max-vertical-offset="38070">
-          <caret line="2436" column="30" selection-start-line="2436" selection-start-column="0" selection-end-line="2436" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/elfinder.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="210">
@@ -1166,18 +1104,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/target/scala-2.11/twirl/main/views/html/restaurant.template.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14376996" vertical-offset="0" max-vertical-offset="10785">
-          <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
           <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1185,7 +1115,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="81" max-vertical-offset="720">
           <caret line="32" column="69" selection-start-line="32" selection-start-column="69" selection-end-line="32" selection-end-column="69" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1193,6 +1122,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
           <caret line="15" column="96" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/Oauth.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
+          <caret line="34" column="106" selection-start-line="33" selection-start-column="8" selection-end-line="34" selection-end-column="106" />
           <folding />
         </state>
       </provider>
@@ -1200,7 +1136,39 @@
     <entry file="file://$PROJECT_DIR$/conf/application.conf">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="576" max-vertical-offset="1215">
-          <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="21" />
+          <caret line="73" column="89" selection-start-line="73" selection-start-column="23" selection-end-line="73" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/scala-2.11/twirl/main/views/html/restaurant.template.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2100" max-vertical-offset="2445">
+          <caret line="140" column="6" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/dit/dit-domain/1.0-SNAPSHOT/dit-domain-1.0-SNAPSHOT.jar!/com/dit/Restaurant.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="945">
+          <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/dit/dit-domain/1.0-SNAPSHOT/dit-domain-1.0-SNAPSHOT.jar!/com/dit/Menu.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="495">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/main.scala.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="555" max-vertical-offset="2295">
+          <caret line="37" column="17" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -1208,47 +1176,31 @@
     <entry file="file://$PROJECT_DIR$/app/views/index.scala.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="10320">
-          <caret line="40" column="48" selection-start-line="24" selection-start-column="40" selection-end-line="40" selection-end-column="47" />
+          <caret line="39" column="110" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="110" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/restaurant.scala.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="8940">
-          <caret line="16" column="36" selection-start-line="16" selection-start-column="36" selection-end-line="16" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/main.scala.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="2070">
-          <caret line="14" column="62" selection-start-line="14" selection-start-column="62" selection-end-line="14" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/Oauth.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
-          <caret line="35" column="55" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="55" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1740">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/conf/routes">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="435">
-          <caret line="8" column="85" selection-start-line="8" selection-start-column="85" selection-end-line="8" selection-end-column="85" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
+          <caret line="14" column="90" selection-start-line="14" selection-start-column="90" selection-end-line="14" selection-end-column="90" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/Application.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.79812205" vertical-offset="0" max-vertical-offset="639">
-          <caret line="43" column="56" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+        <state vertical-scroll-proportion="1.0063897" vertical-offset="0" max-vertical-offset="765">
+          <caret line="53" column="52" selection-start-line="53" selection-start-column="52" selection-end-line="53" selection-end-column="52" />
           <folding />
         </state>
       </provider>

@@ -1,6 +1,5 @@
 package com.dit.service.impl;
 
-import com.dit.Notification;
 import com.dit.service.NotificationService;
 import com.dit.service.amqp.RabbitGateway;
 import com.google.gson.Gson;
@@ -14,7 +13,7 @@ public class NotificationServiceImpl implements NotificationService {
     private RabbitGateway rabbitGateway;
 
     @Override
-    public void publishMessage(Notification notification) {
-        rabbitGateway.publish(new Gson().toJson(notification));
+    public void publishMessage(Object object, String key) {
+        rabbitGateway.publish(new Gson().toJson(object), key);
     }
 }

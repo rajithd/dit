@@ -8,4 +8,6 @@ public interface RestaurantService {
 
     public Restaurant findById(String id);
 
+    public Restaurant findByRegNo(String regNo);
+
 }

@@ -12,8 +12,6 @@ import org.springframework.social.connect.ConnectionFactoryLocator;
 import org.springframework.social.connect.UserProfile;
 import org.springframework.social.facebook.api.Facebook;
 import org.springframework.social.facebook.connect.FacebookConnectionFactory;
-import org.springframework.social.google.api.Google;
-import org.springframework.social.google.connect.GoogleConnectionFactory;
 import org.springframework.social.oauth1.AuthorizedRequestToken;
 import org.springframework.social.oauth1.OAuth1Operations;
 import org.springframework.social.oauth1.OAuth1Parameters;
@@ -27,6 +25,9 @@ import org.springframework.social.twitter.connect.TwitterConnectionFactory;
 import org.springframework.stereotype.Service;
 
 import java.util.Collections;
+
+//import org.springframework.social.google.api.Google;
+//import org.springframework.social.google.connect.GoogleConnectionFactory;
 
 @Service
 public class SocialServiceImpl implements SocialService {
@@ -59,6 +60,9 @@ public class SocialServiceImpl implements SocialService {
 
     @Autowired
     private NotificationService notificationService;
+
+    private static final String NOTIFICATION_KEY = "registerEmailNotification";
+    private static final String ANALYTIC_KEY = "analyticKey";
 
     @Override
     public String buildTwitterAuthUrl() {
@@ -118,37 +122,43 @@ public class SocialServiceImpl implements SocialService {
         filterUser.setUsername(userProfile.getEmail());
 
         Notification notification = NotificationFactory.buildNotification(filterUser, Collections.<String, String>emptyMap());
-        notificationService.publishMessage(notification);
+        notificationService.publishMessage(notification, NOTIFICATION_KEY);
+        notificationService.publishMessage(filterUser, ANALYTIC_KEY);
+
         return oauth2TokenService.save(oauth2TokenService.create(filterUser));
     }
 
     @Override
     public String buildGoogleAuthUrl() {
-        GoogleConnectionFactory googleConnectionFactory = (GoogleConnectionFactory) connectionFactoryLocator.getConnectionFactory(Google.class);
-        OAuth2Operations oAuth2Operations = googleConnectionFactory.getOAuthOperations();
-        return oAuth2Operations.buildAuthorizeUrl(GrantType.IMPLICIT_GRANT, googleOAuth2Parameters);
+//        GoogleConnectionFactory googleConnectionFactory = (GoogleConnectionFactory) connectionFactoryLocator.getConnectionFactory(Google.class);
+//        OAuth2Operations oAuth2Operations = googleConnectionFactory.getOAuthOperations();
+//        return oAuth2Operations.buildAuthorizeUrl(GrantType.IMPLICIT_GRANT, googleOAuth2Parameters);
+
+        return null;
     }
 
     @Override
     public OAuth2Token createGoogleAuthUser(String accessToken) {
-        GoogleConnectionFactory googleConnectionFactory = (GoogleConnectionFactory) connectionFactoryLocator.getConnectionFactory(Google.class);
-        AccessGrant accessGrant = new AccessGrant(accessToken);
-        Connection<Google> connection = googleConnectionFactory.createConnection(accessGrant);
-        UserProfile userProfile = connection.fetchUserProfile();
+//        GoogleConnectionFactory googleConnectionFactory = (GoogleConnectionFactory) connectionFactoryLocator.getConnectionFactory(Google.class);
+//        AccessGrant accessGrant = new AccessGrant(accessToken);
+//        Connection<Google> connection = googleConnectionFactory.createConnection(accessGrant);
+//        UserProfile userProfile = connection.fetchUserProfile();
+//
+//        //validate the user is exists or not
+//        User filterUser = filterUser(SocialNetwork.GOOGLE, userProfile.getUsername());
+//        if (filterUser == null) {
+//            //then create a user and oauth token
+//            User user = userService.buildUser(userProfile);
+//            user.setUserConnection(userConnectionService.buildUserConnection(userProfile, SocialNetwork.GOOGLE));
+//            user = userService.save(user);
+//            filterUser = user;
+//        }
+//        return oauth2TokenService.save(oauth2TokenService.create(filterUser));
 
-        //validate the user is exists or not
-        User filterUser = filterUser(SocialNetwork.GOOGLE, userProfile.getUsername());
-        if (filterUser == null) {
-            //then create a user and oauth token
-            User user = userService.buildUser(userProfile);
-            user.setUserConnection(userConnectionService.buildUserConnection(userProfile, SocialNetwork.GOOGLE));
-            user = userService.save(user);
-            filterUser = user;
-        }
-        return oauth2TokenService.save(oauth2TokenService.create(filterUser));
+        return null;
     }
 
     private User filterUser(SocialNetwork socialNetwork, String username) {
-        return userService.findByUserConnectionProviderId(username,socialNetwork.name());
+        return userService.findByUserConnectionProviderId(username, socialNetwork.name());
     }
 }
