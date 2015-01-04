@@ -22,6 +22,8 @@ public class Restaurant {
     @DBRef
     private List<Menu> menus;
 
+    private List<Menu> specialOffers;
+
     public String getId() {
         return id;
     }
@@ -98,5 +100,16 @@ public class Restaurant {
 
     public void setMenus(List<Menu> menus) {
         this.menus = menus;
+    }
+
+    public List<Menu> getSpecialOffers() {
+        if(this.specialOffers == null){
+            return specialOffers = new LinkedList<>();
+        }
+        return specialOffers;
+    }
+
+    public void setSpecialOffers(List<Menu> specialOffers) {
+        this.specialOffers = specialOffers;
     }
 }

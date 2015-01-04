@@ -19,6 +19,7 @@ import views.html.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 import static play.data.Form.form;
 
@@ -168,6 +169,7 @@ public class Application extends Controller {
         Logger.info("Saving menu : " + menuId);
 
         MenuItem menuItem = new MenuItem();
+        menuItem.setId(UUID.randomUUID().toString());
         menuItem.setName(dynamicForm.get("itemName"));
         menuItem.setDescription(dynamicForm.get("itemDescription"));
         menuItem.setPrice(Double.parseDouble(dynamicForm.get("itemPrice")));

@@ -14,7 +14,7 @@
     <section id="feature" >
         <div class="container">
             <br/>
-            <form method="POST" action="">
+            <form method="GET" action="@routes.Application.makeReservation()">
                 <button type="submit" class="btn btn-danger">Make Reservation</button>
             </form>
 
@@ -93,6 +93,28 @@
             <div class="center wow fadeInDown">
                 <h2>Special Offers</h2>
             </div>
+
+            @for(menu <- restaurant.getSpecialOffers){
+                <div class="row">
+                    <div class="center wow fadeInDown">
+                        <h2>@menu.getName</h2>
+                    </div>
+
+                    @for(item <- menu.getMenuItems){
+                        <div class="col-xs-12 col-sm-4 col-md-3">
+                            <div class="recent-work-wrap">
+                                @*<img class="img-responsive" src="@routes.Assets.at("images/portfolio/recent/item1.png")" alt="">*@
+                            <div class="recent-work-inner">
+                                <h2>@item.getName</h2>
+                                <h3>@item.getDescription</h3>
+                                <h3>@item.getPrice</h3>
+                                <h3>@item.getIngredients</h3>
+                            </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
 
 
 

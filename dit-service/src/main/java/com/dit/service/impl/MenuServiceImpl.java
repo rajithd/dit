@@ -6,6 +6,8 @@ import com.dit.service.MenuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class MenuServiceImpl implements MenuService {
 
@@ -21,5 +23,11 @@ public class MenuServiceImpl implements MenuService {
     @Override
     public Menu findById(String id) {
         return menuRepository.findOne(id);
+    }
+
+
+    @Override
+    public List<Menu> findAll() {
+        return menuRepository.findAll();
     }
 }

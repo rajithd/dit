@@ -14,6 +14,9 @@ GET         /restaurant                                  controllers.Application
 
 POST        /reservation                                 controllers.Application.reservationSubmit
 
+GET        /make/reservation                            controllers.Application.makeReservation
+POST        /make/reservation                            controllers.Application.reserve
+
 #oauth
 #http://dev.dit.com:9001/oauth/twitter/callback?oauth_token=0lTBIbnfXY1ZqZEIaKfiCHXWO6mMtXBG&oauth_verifier=UR8wBSLeaN2RlpvWdw7URXECb1gK2Yuz
 GET         /oauth/twitter/callback                      controllers.Oauth.twitterCallBack(oauth_token : String,  oauth_verifier :String)

@@ -10,7 +10,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Controller
 @RequestMapping(value = "/public/admin")
@@ -30,6 +32,8 @@ public class AdminConnector {
     private PersonFactory personFactory;
     @Autowired
     private MenuService menuService;
+    @Autowired
+    private ReservationService reservationService;
 
     @RequestMapping(method = RequestMethod.GET, value = "/user/{username}/{password}/{regNo}", produces = "application/json")
     @ResponseBody
@@ -122,4 +126,32 @@ public class AdminConnector {
     public Restaurant getRestaurantById(@PathVariable("regNo") String regNo) {
         return restaurantService.findByRegNo(regNo);
     }
+
+    @RequestMapping(value = "/reserve/", method = RequestMethod.POST, produces = "application/json")
+    @ResponseBody
+    public List<String> reserve(@RequestBody List<String> menuItems) {
+        Set<String> selectedMenus = new HashSet<String>();
+        List<Menu> menus = menuService.findAll();
+        for(Menu menu : menus){
+            List<MenuItem> menuItems1 = menu.getMenuItems();
+            for(MenuItem menuItem : menuItems1){
+                for(String menuItemId : menuItems){
+                    if(menuItem.getId().equals(menuItemId)){
+                        selectedMenus.add(menuItemId);
+                    }
+                }
+            }
+        }
+
+        for(String menuId : selectedMenus){
+            Reservation reservation = new Reservation();
+            reservation.setUserId("54a183145194baced32b6b3d");
+            reservation.setMenuItemId(menuId);
+            reservationService.save(reservation);
+        }
+
+        return menuItems;
+    }
+
+
 }

@@ -1,5 +1,7 @@
 package controllers;
 
+import com.dit.Menu;
+import com.dit.MenuItem;
 import com.dit.Restaurant;
 import com.dit.security.OAuth2Token;
 import play.Logger;
@@ -9,7 +11,14 @@ import play.mvc.Controller;
 import play.mvc.Result;
 import util.HttpConnector;
 import views.html.index;
+import views.html.reservation;
 import views.html.restaurant;
+import views.html.sucess;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
 
 import static play.data.Form.form;
 
@@ -27,6 +36,19 @@ public class Application extends Controller {
     public static Result restaurantView() {
 //        OAuth2Token token = (OAuth2Token) Cache.get("token");
         Restaurant rest = (Restaurant) Cache.get("searchResult");
+        List<Menu> menus = rest.getMenus();
+        List<Menu> specialOffer = new ArrayList<>();
+        for(Menu menu : menus){
+            List<MenuItem> menuItems = menu.getMenuItems();
+            for(MenuItem menuItem : menuItems){
+                List<String> strings = Arrays.asList(menuItem.getIngredients());
+                if(strings.contains("chicken")){
+                    specialOffer.add(menu);
+                }
+
+            }
+        }
+        rest.setSpecialOffers(specialOffer);
         return ok(restaurant.render("Search", null, rest));
     }
 
@@ -52,5 +74,38 @@ public class Application extends Controller {
         OAuth2Token token = (OAuth2Token) Cache.get("token");
         Restaurant rest = (Restaurant) Cache.get("searchResult");
         return redirect(routes.Application.index());
+    }
+
+    public static Result makeReservation(){
+        OAuth2Token token = (OAuth2Token) Cache.get("token");
+        Restaurant rest = (Restaurant) Cache.get("searchResult");
+
+
+        return ok(reservation.render("Make Reservation", null, rest));
+    }
+
+    public static Result reserve() throws Exception {
+        OAuth2Token token = (OAuth2Token) Cache.get("token");
+        Restaurant rest = (Restaurant) Cache.get("searchResult");
+
+        List<String> menuItems = new LinkedList<String>();
+        DynamicForm dynamicForm = form().bindFromRequest();
+        for(Menu menu : rest.getMenus()){
+            for(MenuItem menuItem : menu.getMenuItems()){
+                String menuItemId = dynamicForm.get(menuItem.getName());
+                if(menuItemId == null){
+                    continue;
+                }
+                menuItems.add(menuItemId);
+            }
+        }
+
+
+        HttpConnector httpConnector = new HttpConnector();
+        httpConnector.doPostJson(menuItems, "http://localhost:8080/dit-api/public/admin/reserve/");
+
+        Logger.info("itemSelector is: " + menuItems.size());
+
+        return ok(sucess.render("Success", null, rest));
     }
 }
